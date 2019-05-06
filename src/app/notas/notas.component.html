@@ -1,0 +1,14 @@
+<h1>Tareas:</h1>
+
+<h2>Añadir tareas:</h2>
+
+<textarea class="textAreaNotas" rows="4" cols="45" [(ngModel)]="tarea" placeholder="Tarea"></textarea><br>
+<label class="label">Nueva Tarea:</label>
+<button class="buttonAdd" (click)="addTask(tarea)">+</button><br>
+
+<p></p>
+<h2>Tareas en la lista:</h2>
+
+<ul>
+    <li class="label" *ngFor="let elemento of listadoTareas; let i = index" [attr.data-index]="i">{{ listadoTareas[i]}}</li>
+</ul>

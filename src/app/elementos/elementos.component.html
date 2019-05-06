@@ -1,0 +1,30 @@
+<div class="page">
+  <h1>Lista de la compra:</h1>
+  <h2>Añadir elementos a la lista:</h2>
+  <div class="inputs">
+    <input class="textBoxProducto" [(ngModel)]="listado.nombre" placeholder="Producto" />
+    <input type="number" min="1" max="9" step="1" value="1" class="textBoxCantidad" [(ngModel)]="listado.cantidad" placeholder="Cantidad"
+    />
+    <button class="buttonAdd" (click)="addElement(listado.nombre, listado.cantidad)">+</button>
+  </div>
+
+  <h2>Elementos en la lista:</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let elemento of listado; let i = index" [attr.data-index]="i">
+        <input type="checkbox" class="checkBox">
+        <td class="nombre">{{ listado[i].nombre }}</td>
+        <td class="cantidad">{{ listado[i].cantidad }}</td>
+        <button class="buttonAdd" (click)="removeElement(listado[i].nombre, listado[i].cantidad)">x</button>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,1 +1,168 @@
 /* You can add global styles to this file, and also import other style files */
+
+.sideLeft{
+    width: 50%;
+    height: 500px;
+    background-color: black;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+}
+
+.sideRight{
+    width: 50%;
+    height: 500px;
+    background-color: black;
+    float: right;
+    display: inline;
+    box-sizing: border-box;
+    border-left: 0.1em;
+    border-left-color: silver;
+    border-style: solid;
+}
+
+h1{
+    font-size: 2em;
+    color: silver;
+    background-color: black;
+    padding: 0.5em;
+    text-align: center;
+    margin-bottom: 0em;
+}
+
+h2{
+    font-size: 1.4em;
+    color: silver;
+
+    margin-left: 1em;
+    margin-top: 0em;
+}
+
+.page{
+    background-color: black;
+}
+
+.table{
+    margin: 2em;
+    padding-bottom: 2em;
+}
+
+td{  
+    padding: 0.5em;
+    margin: 0em;
+    background-color:rgb(36, 36, 36);
+    border-top-left-radius: 14px; 
+}
+
+th{
+    color: silver;
+    padding: 0.5em;
+}
+
+.nombre{
+    width: 200px;
+    color: white;
+}
+
+.cantidad{
+    width: 80px;
+    color: white;
+}
+
+.textBoxProducto{
+    width: 200px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: black;
+    padding: 0.5em;
+    margin: 0.1em;
+    margin-bottom: 1em;
+    background-color:rgb(36, 36, 36);
+    color: white;
+}
+
+.textBoxProductoActive{
+    width: 200px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: black;
+    padding: 0.5em;
+    margin: 0.1em;
+    background-color:rgb(57, 140, 250);
+    color: white;
+}
+
+.textBoxCantidad{
+    width: 80px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: black;
+    padding: 0.5em;
+    margin: 0.1em;
+    background-color:rgb(36, 36, 36);
+    color: white;
+}
+
+.buttonAdd{
+    background-color:rgb(36, 36, 36);
+    color:white;
+    border-radius: 14px;
+    height: 28px;
+    width: 28px;
+    border-color: transparent;
+    margin: 0.1em;
+}
+
+.buttonAdd:hover{
+    background-color:rgb(57, 140, 250);
+}
+
+.checkBox{
+    height: 15px;
+    width: 15px;
+    border-color: transparent;
+    margin: 0.5em;
+}
+
+.inputs{
+    margin-left: 4em;
+}
+
+.textAreaNotas{
+    background-color: rgb(36, 36, 36);
+    margin-left: 2em;
+    color:white;
+    border-color:transparent;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 0.6em;
+}
+
+.label{
+    color:silver;
+    margin-left: 3em;
+}
+
+/*RESPONSIVE BREAKPOINT*/
+@media (max-width : 850px){
+
+    .sideLeft{
+        width: 100%;
+        float: right;
+        box-sizing: border-box
+    }
+
+    .sideRight{
+        width: 100%;
+        float: right;
+        box-sizing: border-box;
+        border-top-color: white;
+        border-top-style: solid;
+        border-top-width: 0.1em;
+    }
+}
