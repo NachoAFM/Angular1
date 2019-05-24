@@ -8,7 +8,10 @@
 
 <p></p>
 <h2>Tareas en la lista:</h2>
+<!-- Uso de un pipe para formatear la fecha -->
+<p class="label">{{ fecha | date:"dd/MM/yyyy" }}</p>
 
+<!-- Uso de directiva capTaskComplete -->
 <ul>
-    <li class="label" *ngFor="let elemento of listadoTareas; let i = index" [attr.data-index]="i">{{ listadoTareas[i]}}</li>
+    <li [capTaskComplete] class="label" *ngFor="let elemento of listadoTareas; let i = index" [attr.data-index]="i">{{ listadoTareas[i]}}</li>
 </ul>

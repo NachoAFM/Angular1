@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../product.service';
+import { LogService } from '../log.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'cap-elementos',
@@ -7,21 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElementosComponent implements OnInit {
 
-  listado = [{nombre:'Huevos',cantidad: 12}, {nombre:'Leche',cantidad: 4}];
+  listado: Product[];
 
   get ListadoValue(){
     return this.listado;
   }
   
-  constructor() {
+  constructor(private productService: ProductService, private logService: LogService) {
   }
 
   ngOnInit() {
-    
+    this.getProducts();
+  }
+
+  // Uso de un servicio para obtener los datos del mock y para sacar el log por consola
+  getProducts(): void{
+    this.productService.getProducts()
+      .subscribe(productos => this.listado = productos);
+    this.logService.addLog("Products fetched from mock file");
   }
 
   addElement(newNombre: string, newCantidad: number): void {
     this.listado.push({nombre: newNombre, cantidad: newCantidad});
+    this.logService.addLog("Product added to the list");
   }
 
   removeElement(keyNombre: string, keyCantidad: number): void {
@@ -29,6 +40,7 @@ export class ElementosComponent implements OnInit {
     for(let product of this.listado){
       if(product.nombre == keyNombre && product.cantidad == keyCantidad){
         this.listado.splice(ind, 1);
+        this.logService.addLog("Product deleted from list");
       }
       ind = ind +1;
     }

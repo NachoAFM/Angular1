@@ -5,12 +5,16 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent } from './app.component';
 import { ElementosComponent } from './elementos/elementos.component';
 import { NotasComponent } from './notas/notas.component';
+import { LogComponent } from './log/log.component';
+import { TaskCompleteDirective } from './task-complete.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ElementosComponent,
-    NotasComponent
+    NotasComponent,
+    LogComponent,
+    TaskCompleteDirective,
   ],
   imports: [
     BrowserModule,
