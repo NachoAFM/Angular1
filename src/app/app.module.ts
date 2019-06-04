@@ -9,6 +9,9 @@ import { ElementosComponent } from './elementos/elementos.component';
 import { NotasComponent } from './notas/notas.component';
 import { LogComponent } from './log/log.component';
 import { TaskCompleteDirective } from './task-complete.directive';
+import { AdminComponent } from './admin/admin/admin.component';
+
+
 
 
 @NgModule({
@@ -21,7 +24,7 @@ import { TaskCompleteDirective } from './task-complete.directive';
     AppComponent,
     LogComponent,
     NotasComponent,
-    ElementosComponent ,
+    ElementosComponent,
     TaskCompleteDirective
   ],
   providers: [],
