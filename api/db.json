@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nombre": "Leche",
+      "cantidad": "2"
+    },
+    {
+      "id": 2,
+      "nombre": "Huevos",
+      "cantidad": "12"
+    },
+    {
+      "id": 3,
+      "nombre": "Harina",
+      "cantidad": "1"
+    },
+    {
+      "id": 4,
+      "nombre": "Azúcar",
+      "cantidad": "1"
+    },
+    {
+      "id": 5,
+      "nombre": "Chocolate",
+      "cantidad": "2"
+    }
+  ]
+}

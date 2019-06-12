@@ -10,7 +10,7 @@ import { NotasComponent } from './notas/notas.component';
 import { LogComponent } from './log/log.component';
 import { TaskCompleteDirective } from './task-complete.directive';
 import { AdminComponent } from './admin/admin/admin.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -19,6 +19,7 @@ import { AdminComponent } from './admin/admin/admin.component';
     AppRoutingModule,
     BrowserModule,
     FormsModule, 
+    HttpClientModule
   ],
   declarations: [ 
     AppComponent,

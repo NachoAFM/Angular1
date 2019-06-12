@@ -5,7 +5,7 @@ import { NotasComponent } from './notas/notas.component'
 import { AdminComponent } from './admin/admin/admin.component';
 
 const routes: Routes = [
-      { path: '', redirectTo: '/characters', pathMatch: 'full' },
+      { path: '', redirectTo: '/lista', pathMatch: 'full' },
       { path: 'lista', component: ElementosComponent },
       { path: 'tareas', component: NotasComponent }, 
       { path: 'admin', loadChildren: './admin/admin.module#AdminModule' } 
