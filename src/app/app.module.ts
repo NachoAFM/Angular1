@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -11,6 +11,8 @@ import { LogComponent } from './log/log.component';
 import { TaskCompleteDirective } from './task-complete.directive';
 import { AdminComponent } from './admin/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { FormularioComponent } from './formulario/formulario.component';
 
 
 
@@ -18,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    FormsModule, 
+    FormsModule,
+    ReactiveFormsModule, 
     HttpClientModule
   ],
   declarations: [ 
@@ -26,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     LogComponent,
     NotasComponent,
     ElementosComponent,
-    TaskCompleteDirective
+    TaskCompleteDirective,
+    ErrorPageComponent,
+    FormularioComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
